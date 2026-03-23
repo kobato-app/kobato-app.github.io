@@ -842,3 +842,116 @@ html.dark .char-tag.purple { background: #2A2040; color: #C0A8F8; border: 1px so
 .reveal:nth-child(2) { animation-delay: 0.08s; }
 .reveal:nth-child(3) { animation-delay: 0.16s; }
 .reveal:nth-child(4) { animation-delay: 0.24s; }
+
+/* ─── PRIVACY PAGE ─── */
+.privacy-page {
+  min-height: calc(100svh - 64px);
+  padding: 60px 0 80px;
+}
+.privacy-page-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.privacy-back-link {
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none;
+  margin-bottom: 36px;
+  padding: 6px 14px;
+  background: var(--primary-light);
+  border: 1.5px solid var(--primary);
+  border-radius: var(--radius-pill);
+  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 3px 0 0 var(--primary-dark);
+}
+.privacy-back-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 0 0 var(--primary-dark);
+}
+.privacy-back-link:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 0 0 var(--primary-dark);
+}
+.privacy-page-header {
+  margin-bottom: 48px;
+  padding-bottom: 32px;
+  border-bottom: 1.5px solid var(--border);
+}
+.privacy-page-title {
+  font-size: clamp(28px, 5vw, 40px);
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+.privacy-page-updated {
+  font-size: 14px;
+  color: var(--text-body);
+}
+.privacy-page-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.privacy-page-section {
+  padding: 28px 0;
+  border-bottom: 1px solid var(--border);
+}
+.privacy-page-section:last-child { border-bottom: none; }
+.privacy-page-section-title {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+.privacy-section-num {
+  font-size: 12px;
+  font-weight: 900;
+  color: var(--primary);
+  background: var(--primary-light);
+  border: 1.5px solid var(--primary);
+  border-radius: 6px;
+  padding: 2px 7px;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+.privacy-page-section-body {
+  font-size: 15px;
+  color: var(--text-body);
+  line-height: 1.75;
+}
+.privacy-page-list {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style: none;
+}
+.privacy-page-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 15px;
+  color: var(--text-body);
+  line-height: 1.6;
+}
+.privacy-page-list li::before {
+  content: '✓';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  border-radius: 50%;
+  font-size: 11px;
+  font-weight: 900;
+  border: 1.5px solid var(--primary);
+  margin-top: 2px;
+}

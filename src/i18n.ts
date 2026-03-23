@@ -130,6 +130,60 @@ export const T = {
       terms: 'Terms of Service',
       copy: '© 2026 Team Kobato. All rights reserved.',
     },
+    privacyPage: {
+      title: 'Privacy Policy',
+      lastUpdated: 'Last updated: March 2026',
+      backToHome: '← Back to Home',
+      sections: [
+        {
+          heading: 'Overview',
+          body: 'Kobato is a free Japanese learning app. We are committed to protecting your privacy. This policy explains what data we collect (spoiler: almost none) and how we handle it.',
+        },
+        {
+          heading: 'Data We Do Not Collect',
+          body: 'Kobato does not collect, store, or transmit any personal information. Specifically, we do not collect:',
+          list: [
+            'Your name, email address, or any account information',
+            'Device identifiers or advertising IDs',
+            'Location data',
+            'App usage analytics or activity logs',
+            'Crash reports sent to our servers',
+          ],
+        },
+        {
+          heading: 'Data Stored on Your Device',
+          body: 'All study progress, settings, and preferences are stored locally on your device only. This data never leaves your device unless you explicitly choose to sync it to Google Drive.',
+        },
+        {
+          heading: 'Google Drive Sync (Optional)',
+          body: 'If you choose to enable Google Drive sync, your study records are saved directly to your personal Google Drive account. Kobato does not have access to your Google Drive data — the sync happens entirely between your device and your own Google account. We never see or store this data.',
+        },
+        {
+          heading: 'Voice Synthesis (Voicevox)',
+          body: 'Kobato uses Voicevox for text-to-speech. All voice synthesis is performed on-device. No text or audio data is sent to external servers.',
+        },
+        {
+          heading: 'Offline Operation',
+          body: 'All core learning features work fully offline. The app does not require an internet connection, and no data is transmitted during normal use.',
+        },
+        {
+          heading: 'Third-Party Services',
+          body: 'Kobato does not integrate any third-party analytics, advertising, or tracking SDKs.',
+        },
+        {
+          heading: 'Children\'s Privacy',
+          body: 'Kobato does not knowingly collect any information from anyone, including children. Since we collect no data at all, the app is safe for users of all ages.',
+        },
+        {
+          heading: 'Changes to This Policy',
+          body: 'If we make changes to this policy, we will update the "Last updated" date above. Continued use of the app after changes constitutes acceptance of the updated policy.',
+        },
+        {
+          heading: 'Contact',
+          body: 'If you have any questions about this privacy policy, please reach out to us via our GitHub repository or Discord server.',
+        },
+      ],
+    },
   },
   ko: {
     nav: {
@@ -258,6 +312,60 @@ export const T = {
       privacy: '개인정보처리방침',
       terms: '이용약관',
       copy: '© 2026 Team Kobato. All rights reserved.',
+    },
+    privacyPage: {
+      title: '개인정보처리방침',
+      lastUpdated: '최종 업데이트: 2026년 3월',
+      backToHome: '← 홈으로 돌아가기',
+      sections: [
+        {
+          heading: '개요',
+          body: 'Kobato는 무료 일본어 학습 앱입니다. 저희는 여러분의 개인정보 보호를 최우선으로 생각합니다. 이 방침은 저희가 수집하는 데이터(사실상 거의 없습니다)와 그 처리 방법을 안내합니다.',
+        },
+        {
+          heading: '수집하지 않는 정보',
+          body: 'Kobato는 어떠한 개인 정보도 수집, 저장, 전송하지 않습니다. 구체적으로 다음 정보를 수집하지 않습니다:',
+          list: [
+            '이름, 이메일 주소 등 계정 정보',
+            '기기 식별자 또는 광고 ID',
+            '위치 정보',
+            '앱 사용 분석 또는 활동 로그',
+            '서버로 전송되는 충돌 보고서',
+          ],
+        },
+        {
+          heading: '기기에 저장되는 데이터',
+          body: '모든 학습 기록, 설정, 환경설정은 사용자의 기기에만 로컬로 저장됩니다. 이 데이터는 Google 드라이브 동기화를 명시적으로 선택하지 않는 한 기기 밖으로 나가지 않습니다.',
+        },
+        {
+          heading: 'Google 드라이브 동기화 (선택 사항)',
+          body: 'Google 드라이브 동기화를 활성화하면 학습 기록이 사용자의 Google 드라이브 계정에 직접 저장됩니다. Kobato는 사용자의 Google 드라이브 데이터에 접근할 수 없습니다. 동기화는 사용자의 기기와 본인의 Google 계정 사이에서만 이루어집니다.',
+        },
+        {
+          heading: '음성 합성 (Voicevox)',
+          body: 'Kobato는 텍스트 음성 변환(TTS)에 Voicevox를 사용합니다. 모든 음성 합성은 기기 내에서 처리됩니다. 텍스트나 오디오 데이터는 외부 서버로 전송되지 않습니다.',
+        },
+        {
+          heading: '오프라인 운영',
+          body: '모든 핵심 학습 기능은 완전히 오프라인에서 작동합니다. 앱은 인터넷 연결이 필요하지 않으며, 일반 사용 중 어떠한 데이터도 전송되지 않습니다.',
+        },
+        {
+          heading: '제3자 서비스',
+          body: 'Kobato는 제3자 분석, 광고 또는 추적 SDK를 통합하지 않습니다.',
+        },
+        {
+          heading: '아동의 개인정보 보호',
+          body: 'Kobato는 아동을 포함한 누구의 정보도 수집하지 않습니다. 어떠한 데이터도 수집하지 않으므로 모든 연령대의 사용자가 안심하고 사용할 수 있습니다.',
+        },
+        {
+          heading: '방침 변경',
+          body: '이 방침을 변경할 경우 위의 "최종 업데이트" 날짜를 갱신합니다. 변경 후에도 앱을 계속 사용하면 업데이트된 방침에 동의한 것으로 간주합니다.',
+        },
+        {
+          heading: '문의',
+          body: '이 개인정보처리방침에 대해 질문이 있으시면 GitHub 저장소 또는 Discord 서버를 통해 문의해 주세요.',
+        },
+      ],
     },
   },
 }

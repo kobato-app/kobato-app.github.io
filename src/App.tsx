@@ -1,13 +1,10 @@
 import { useState, useEffect } from 'react'
+import { Routes, Route } from 'react-router-dom'
 import { T, type Lang, type Theme } from './i18n'
 import { Nav } from './components/Nav'
-import { Hero } from './components/Hero'
-import { Features } from './components/Features'
-import { Characters } from './components/Characters'
-import { Dictionary } from './components/Dictionary'
-import { PrivacySection } from './components/PrivacySection'
-import { FAQ } from './components/FAQ'
 import { Footer } from './components/Footer'
+import { LandingPage } from './pages/LandingPage'
+import { PrivacyPage } from './pages/PrivacyPage'
 import './App.css'
 
 export default function App() {
@@ -31,12 +28,10 @@ export default function App() {
   return (
     <>
       <Nav lang={lang} setLang={setLang} theme={theme} setTheme={setTheme} t={t.nav} />
-      <Hero t={t.hero} />
-      <Features t={t.features} />
-      <Characters t={t.characters} />
-      <Dictionary t={t.dictionary} />
-      <PrivacySection t={t.privacy} />
-      <FAQ t={t.faq} />
+      <Routes>
+        <Route path="/" element={<LandingPage t={t} />} />
+        <Route path="/privacy" element={<PrivacyPage t={t.privacyPage} />} />
+      </Routes>
       <Footer t={t.footer} />
     </>
   )

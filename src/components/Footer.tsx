@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { type Translations } from '../i18n'
 
 type Props = { t: Translations['en']['footer'] }
@@ -11,7 +12,7 @@ export function Footer({ t }: Props) {
             <span>🫛</span> Kobato
           </div>
           <div className="footer-links">
-            <a href="#" className="footer-link">{t.privacy}</a>
+            <Link to="/privacy" className="footer-link">{t.privacy}</Link>
             <span style={{ color: 'var(--border)', padding: '0 4px' }}>·</span>
             <a href="#" className="footer-link">{t.terms}</a>
           </div>

@@ -30,8 +30,8 @@ export default function App() {
       <Route element={<Layout lang={lang} setLang={setLang} theme={theme} setTheme={setTheme} t={t} />}>
         <Route path="/" element={<LandingPage t={t} />} />
       </Route>
-      <Route path="/privacy" element={<PrivacyPage lang={lang} />} />
-      <Route path="/terms" element={<TermsPage lang={lang} />} />
+      <Route path="/privacy" element={<PrivacyPage />} />
+      <Route path="/terms" element={<TermsPage />} />
     </Routes>
   )
 }

@@ -1,5 +1,7 @@
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { type Lang } from '../i18n'
+import { legalStyles as s } from './legalStyles'
 
 type Section = {
   heading: string
@@ -134,84 +136,63 @@ const content: Record<Lang, { title: string; effective: string; back: string; se
   },
 }
 
-const styles = {
-  page: {
-    maxWidth: 680,
-    margin: '0 auto',
-    padding: '48px 24px 80px',
-    fontFamily: 'Georgia, "Times New Roman", serif',
-    color: '#111',
-    lineHeight: 1.8,
-    fontSize: 15,
-  } as React.CSSProperties,
-  back: {
-    display: 'inline-block',
-    marginBottom: 40,
-    fontSize: 13,
-    color: '#555',
-    textDecoration: 'none',
-  } as React.CSSProperties,
-  title: {
-    fontSize: 28,
-    fontWeight: 700,
-    marginBottom: 6,
-    fontFamily: 'Georgia, serif',
-    color: '#111',
-  } as React.CSSProperties,
-  effective: {
-    fontSize: 13,
-    color: '#888',
-    marginBottom: 40,
-    paddingBottom: 24,
-    borderBottom: '1px solid #ddd',
-  } as React.CSSProperties,
-  section: {
-    marginBottom: 32,
-  } as React.CSSProperties,
-  heading: {
-    fontSize: 15,
-    fontWeight: 700,
-    marginBottom: 8,
-    color: '#111',
-    fontFamily: 'Georgia, serif',
-  } as React.CSSProperties,
-  body: {
-    fontSize: 14,
-    color: '#333',
-    margin: 0,
-    lineHeight: 1.85,
-  } as React.CSSProperties,
-  list: {
-    marginTop: 10,
-    paddingLeft: 20,
-    display: 'flex',
-    flexDirection: 'column' as const,
-    gap: 4,
-  } as React.CSSProperties,
-  listItem: {
-    fontSize: 14,
-    color: '#333',
-    lineHeight: 1.75,
-  } as React.CSSProperties,
+function LangBtn({ active, onClick, label }: { active: boolean; onClick: () => void; label: string }) {
+  return (
+    <button
+      onClick={onClick}
+      style={{
+        padding: '3px 10px',
+        fontSize: 12,
+        border: 'none',
+        cursor: 'pointer',
+        background: active ? '#111' : 'transparent',
+        color: active ? '#fff' : '#555',
+        fontFamily: 'Georgia, serif',
+      }}
+    >
+      {label}
+    </button>
+  )
 }
 
-type Props = { lang: Lang }
-
-export function TermsPage({ lang }: Props) {
+export function TermsPage() {
+  const [lang, setLang] = useState<Lang>('ko')
   const c = content[lang]
+
+  useEffect(() => {
+    const html = document.documentElement
+    const prevClass = html.className
+    const prevBg = document.body.style.background
+    const prevColor = document.body.style.color
+    html.className = ''
+    document.body.style.background = '#fff'
+    document.body.style.color = '#111'
+    return () => {
+      html.className = prevClass
+      document.body.style.background = prevBg
+      document.body.style.color = prevColor
+    }
+  }, [])
+
   return (
-    <div style={styles.page}>
-      <Link to="/" style={styles.back}>{c.back}</Link>
-      <h1 style={styles.title}>{c.title}</h1>
-      <p style={styles.effective}>{c.effective}</p>
-      {c.sections.map((s, i) => (
-        <div key={i} style={styles.section}>
-          <h2 style={styles.heading}>{s.heading}</h2>
-          <p style={styles.body}>{s.body}</p>
-          {s.list && (
-            <ul style={styles.list}>
-              {s.list.map((item, j) => (
-                <li key={j} style={styles.listItem}>{item}</li>
+    <div style={s.page}>
+      <div style={s.topbar}>
+        <Link to="/" style={s.back}>{c.back}</Link>
+        <div style={s.langSwitch}>
+          <LangBtn active={lang === 'ko'} onClick={() => setLang('ko')} label="KO" />
+          <LangBtn active={lang === 'en'} onClick={() => setLang('en')} label="EN" />
+        </div>
+      </div>
+      <h1 style={s.title}>{c.title}</h1>
+      <p style={s.effective}>{c.effective}</p>
+      {c.sections.map((sec, i) => (
+        <div key={i} style={s.section}>
+          <h2 style={s.heading}>{sec.heading}</h2>
+          <p style={s.body}>{sec.body}</p>
+          {sec.list && (
+            <ul style={s.list}>
+              {sec.list.map((item, j) => (
+                <li key={j} style={s.listItem}>{item}</li>
               ))}
             </ul>
           )}

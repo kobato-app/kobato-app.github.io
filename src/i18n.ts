@@ -184,6 +184,54 @@ export const T = {
         },
       ],
     },
+    termsPage: {
+      title: 'Terms of Service',
+      lastUpdated: 'Last updated: March 2026',
+      backToHome: '← Back to Home',
+      sections: [
+        {
+          heading: 'Acceptance of Terms',
+          body: 'By downloading or using Kobato, you agree to these Terms of Service. If you do not agree, please do not use the app.',
+        },
+        {
+          heading: 'Description of Service',
+          body: 'Kobato is a free Japanese language learning application available on iOS and Android. It provides kana, vocabulary, and kanji study modes with text-to-speech powered by Voicevox. All features are free of charge with no ads or in-app purchases.',
+        },
+        {
+          heading: 'Use of the App',
+          body: 'You may use Kobato for personal, non-commercial learning purposes. You agree not to:',
+          list: [
+            'Reverse engineer, decompile, or modify the app',
+            'Use the app for any unlawful purpose',
+            'Attempt to gain unauthorized access to any part of the app or its infrastructure',
+          ],
+        },
+        {
+          heading: 'Intellectual Property',
+          body: 'The Kobato app and its original content are owned by Team Kobato. Voicevox character voices and assets are subject to their respective licenses — please refer to the Voicevox terms for details on usage of Zundamon, Shikoku Metan, and Nemo.',
+        },
+        {
+          heading: 'Dictionary Data',
+          body: 'Kobato uses JMDict, a community-maintained Japanese–English dictionary. JMDict is provided under its own license. We are grateful to the JMDict Project and all its contributors.',
+        },
+        {
+          heading: 'No Warranty',
+          body: 'Kobato is provided "as is" without warranty of any kind. We do not guarantee that the app will be error-free, uninterrupted, or that any defects will be corrected. Use at your own risk.',
+        },
+        {
+          heading: 'Limitation of Liability',
+          body: 'To the fullest extent permitted by law, Team Kobato shall not be liable for any indirect, incidental, or consequential damages arising from your use of the app.',
+        },
+        {
+          heading: 'Changes to Terms',
+          body: 'We may update these terms from time to time. We will update the "Last updated" date when changes are made. Continued use of the app after changes constitutes acceptance of the updated terms.',
+        },
+        {
+          heading: 'Contact',
+          body: 'If you have any questions about these terms, please contact us via our GitHub repository or Discord server.',
+        },
+      ],
+    },
   },
   ko: {
     nav: {
@@ -364,6 +412,54 @@ export const T = {
         {
           heading: '문의',
           body: '이 개인정보처리방침에 대해 질문이 있으시면 GitHub 저장소 또는 Discord 서버를 통해 문의해 주세요.',
+        },
+      ],
+    },
+    termsPage: {
+      title: '이용약관',
+      lastUpdated: '최종 업데이트: 2026년 3월',
+      backToHome: '← 홈으로 돌아가기',
+      sections: [
+        {
+          heading: '약관 동의',
+          body: 'Kobato를 다운로드하거나 사용함으로써 본 이용약관에 동의하게 됩니다. 동의하지 않으시면 앱을 사용하지 마십시오.',
+        },
+        {
+          heading: '서비스 설명',
+          body: 'Kobato는 iOS 및 Android에서 이용 가능한 무료 일본어 학습 앱입니다. Voicevox를 활용한 TTS와 함께 가나, 어휘, 한자 학습 모드를 제공합니다. 모든 기능은 광고 및 인앱 결제 없이 완전 무료로 제공됩니다.',
+        },
+        {
+          heading: '앱 이용',
+          body: '개인적, 비상업적 학습 목적으로만 Kobato를 이용할 수 있습니다. 다음 행위는 금지됩니다:',
+          list: [
+            '앱의 리버스 엔지니어링, 디컴파일 또는 수정',
+            '불법적인 목적으로의 앱 이용',
+            '앱 또는 인프라에 대한 무단 접근 시도',
+          ],
+        },
+        {
+          heading: '지적 재산권',
+          body: 'Kobato 앱 및 원본 콘텐츠는 Team Kobato에 귀속됩니다. Voicevox 캐릭터 음성 및 에셋은 각각의 라이선스를 따릅니다. 즌다몬, 시코쿠 메탄, Nemo 사용에 관해서는 Voicevox 이용약관을 참조해 주세요.',
+        },
+        {
+          heading: '사전 데이터',
+          body: 'Kobato는 커뮤니티가 관리하는 일·영 사전인 JMDict를 사용합니다. JMDict는 자체 라이선스 하에 제공됩니다. JMDict 프로젝트와 모든 기여자분들께 감사드립니다.',
+        },
+        {
+          heading: '무보증',
+          body: 'Kobato는 어떠한 보증도 없이 "있는 그대로" 제공됩니다. 오류 없는 운영, 중단 없는 서비스 또는 결함 수정을 보장하지 않습니다. 사용에 따른 위험은 본인이 부담합니다.',
+        },
+        {
+          heading: '책임 제한',
+          body: '관련 법률이 허용하는 최대 범위 내에서, Team Kobato는 앱 사용으로 인해 발생하는 간접적, 우발적 또는 결과적 손해에 대해 책임을 지지 않습니다.',
+        },
+        {
+          heading: '약관 변경',
+          body: '본 약관은 수시로 변경될 수 있습니다. 변경 시 "최종 업데이트" 날짜를 갱신합니다. 변경 후에도 앱을 계속 사용하면 업데이트된 약관에 동의한 것으로 간주합니다.',
+        },
+        {
+          heading: '문의',
+          body: '이용약관에 관한 질문이 있으시면 GitHub 저장소 또는 Discord 서버를 통해 문의해 주세요.',
         },
       ],
     },

@@ -14,7 +14,7 @@ export function Footer({ t }: Props) {
           <div className="footer-links">
             <Link to="/privacy" className="footer-link">{t.privacy}</Link>
             <span style={{ color: 'var(--border)', padding: '0 4px' }}>·</span>
-            <a href="#" className="footer-link">{t.terms}</a>
+            <Link to="/terms" className="footer-link">{t.terms}</Link>
           </div>
           <div className="footer-socials">
             <a href="#" className="social-btn" title="GitHub" aria-label="GitHub">

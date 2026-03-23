@@ -5,6 +5,7 @@ import { Nav } from './components/Nav'
 import { Footer } from './components/Footer'
 import { LandingPage } from './pages/LandingPage'
 import { PrivacyPage } from './pages/PrivacyPage'
+import { TermsPage } from './pages/TermsPage'
 import './App.css'
 
 export default function App() {
@@ -31,6 +32,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<LandingPage t={t} />} />
         <Route path="/privacy" element={<PrivacyPage t={t.privacyPage} />} />
+        <Route path="/terms" element={<TermsPage t={t.termsPage} />} />
       </Routes>
       <Footer t={t.footer} />
     </>
